@@ -1,0 +1,251 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+textarea{
+	resize: none;
+	border: 0.5;
+}
+
+.header{
+	position: absolute;
+	width: 100%;
+	height: 6%; /*ancho del 6% del body*/
+	border: 0px solid #837240;
+	background: #5c90b9;
+}
+
+.logo{
+	position: absolute;
+	top: 5%;
+	left: 20px;
+}
+
+.texto{
+	position: absolute;
+	text-align: center;
+	font-family: "calibri";
+	font-size: 15px;
+	font-style: bold;
+	color: #000000;
+	top: 50%;
+	left: 50px;
+}
+
+.textocabecera{
+	position: relative;
+	text-align: center;
+	font-family: "cooper";
+	font-size: 20px;
+	font-style: bold;
+	color: #000000;
+	top: 25%;
+}
+
+.main-container{
+    position: absolute;
+	top: 6%;/*posicion top respecto del body*/
+	width: 100%;
+	height: 88%;/*ancho del 88% del body*/
+	border: 0px solid #ff0000;
+	background: #E9EDF7;
+}
+
+.input_texto{
+    position: absolute;
+	width: 70%;
+	height: 100%;/*ancho del 88% del body*/
+	border: 0px solid #fffb01;
+	background: #E9EDF7;
+    margin: 0 10%;
+}
+
+.textarea_input_texto{
+    position: absolute;
+    width: 70%;
+    font-size: 25px;
+    font-style: bold;
+    top: 10%;
+    background-color:  #E9EDF7;;
+    color: #1a2d9c;
+    border: none;
+    outline: 0 none;
+}
+
+.output_texto{
+    position: absolute;
+	width: 30%;
+	height: 100%;/*ancho del 88% del body*/
+    left: 70%;
+	border: 0px solid #141413;
+	background: #E9EDF7;
+}
+
+.textarea_output_texto{
+    position: absolute;
+    width: 60%;
+    font-size: 20px;
+    font-style: bold;
+    top: 10%;
+    left: 25%;
+    padding-left: 12px;
+    padding-top: 10px;
+    border-radius: 20px;
+    border: none;
+	outline: 0 none;
+	height: 85%;
+}
+
+.imagen_resultado{
+    position: absolute;
+    top: 20%;
+    left: 24%;
+    /*visibility: hidden;*/
+}
+
+.botones{
+	position: absolute;
+	display: inline;
+	width: 100%;
+	height: 10%;
+	border: 0px solid #ff00bf;
+	top: 90%;
+	left: 0%;
+	padding-left: 20%;
+	background: none;
+}
+
+/* botones ubicacion*/
+.codificar{
+	position: absolute;
+	top: -80%;
+	left: 30%;
+}
+.decodificar{
+	position: absolute;
+	top: -80%;
+	left: 50%;
+}
+.copiar{
+	position: absolute;
+	top: -80%;
+	left: 82%;
+}
+
+.button{
+	background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 0px 2px;
+    -webkit-transition-duration: 0.5s; /* Safari */
+    transition-duration: 0.5s;
+    cursor: pointer;
+	display: inline-block;
+}
+
+.btn-codificar {
+	display: inline-block;
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+	top: 10%;
+	border-radius: 15px;
+}
+
+.btn-codificar:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
+.btn-decodificar {
+	display: inline-block;
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+	top: 10%;
+	border-radius: 15px;
+}
+
+.btn-decodificar:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
+.btn-copiar {
+	display: inline-block;
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+	top: 10%;
+	border-radius: 15px;
+    visibility: hidden;
+}
+
+.btn-copiar:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
+.div-derecha{
+	position: absolute;
+	text-align: center;
+	width: 40%;
+	height: 100%;/*ancho del 88% del body*/
+	left: 60%;
+	border: 0px solid #fffb01;
+	background: #cccc;
+}
+
+.textarea-up-der{
+	position: relative;
+	width: 100%;
+	height: 40%;
+	top: 5%;
+}
+
+.textarea-dw-der{
+	position: relative;
+	width: 100%;
+	height: 40%;
+	top: 2%;
+}
+
+.footer{
+	position: absolute;
+	top: 94%;/*posicion top respecto del body*/
+	width: 100%;
+	height: 6%;/*ancho del 6% del body*/
+	border: 0px solid #837240;
+	background: #abcd;
+}
+
+.footer-cripto{
+	position: absolute;
+	top: 35%;
+	left: 5%;
+	font-size: 12px;
+	font-family: "calibri";
+}
+
+.footer-copy{
+	position: absolute;
+	top: 35%;
+	left: 45%;
+	font-size: 15px;
+	font-family: "calibri";
+}
+
+.footer-contacto{
+	position: absolute;
+	top: 40%;
+	left: 85%;
+	font-size: 12px;
+	font-family: "calibri";
+	font-style: bold;
+}

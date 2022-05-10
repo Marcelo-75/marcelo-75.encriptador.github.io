@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Encriptador</title>
+	<link rel="stylesheet" type="text/css" href="encriptador-style.css">
+</head>
+<body>
+	<header>
+		<nav>
+			<div class="header">
+				<div class="logo"><img width="5%" height="5%" src="candado.png"/></div>
+				<div class="logo texto"><p>Encrypter by data</p></div>
+				<div class="textocabecera"><p>ENCRIPTADOR DE TEXTO</p></div>
+			</div>
+		</nav>
+	</header>
+	<main>
+		<div class="main-container">
+            <div class="input_texto">
+                <textarea class="textarea_input_texto" id="texto_cod_deco" placeholder="Ingrese el texto aqui" cols="50" rows="10"></textarea>
+            </div>
+            <div class="output_texto">
+                <textarea class="textarea_output_texto" id="texto_codificado" readonly="readonly" cols="50" rows="20"></textarea>
+                <img  id="msg_imagen" src="fondo_area_resultado.png" class="imagen_resultado">
+            </div>
+            <div class="botones">
+				<div class="codificar">
+					<button class="button btn-codificar" id="btnCodificar">Codificar</button>
+				</div>
+				<div class="decodificar">
+					<button class="button btn-decodificar" id="btnDecodificar">Decodificar</button>
+				</div>
+				<div class="copiar">
+					<button class="button btn-copiar" id="btnCopiar">Copiar</button>
+				</div>
+            </div>
+		</div>
+	</main>
+	<footer>
+		<div class="footer">
+			<div class="footer-cripto">
+				<p>Encrypter by Data</p>
+			</div>
+			<div class="footer-copy">
+				<p>&copy Copyright Datawork 2022</p>
+			</div>
+			<div class="footer-contacto">
+				<p>Contacto: marcelo.motto75@gmail.com</p>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
+<script>
+
+	var input_texto = document.getElementById("texto_cod_deco");
+	var output_texto = document.getElementById("texto_codificado");
+
+    var msgImagen = document.getElementById("msg_imagen");
+
+	var btnCodificar = document.getElementById("btnCodificar");
+	var btnDecodificar = document.getElementById("btnDecodificar");
+
+	function Codificar() {
+		if(input_texto.value != "") {
+			var textoCodificado = "";
+			for(var x = 0; x < input_texto.value.length; x++) {
+				if(input_texto.value[x] == "a") {
+					textoCodificado=textoCodificado+"ai";
+				} else if(input_texto.value[x] == "e") {
+					textoCodificado=textoCodificado+"enter";
+				} else if(input_texto.value[x] == "i") {
+					textoCodificado=textoCodificado+"imes";
+				} else if(input_texto.value[x] == "o") {
+					textoCodificado=textoCodificado+"ober";
+				} else if(input_texto.value[x] == "u") {
+					textoCodificado=textoCodificado+"ufat";
+				} else {
+					textoCodificado = textoCodificado + input_texto.value[x];
+				}
+                msgImagen.style.visibility = 'hidden';
+                btnCopiar.style.visibility = 'visible';
+			}
+			output_texto.value = textoCodificado;
+			input_texto.value = "";
+		} else {alert("No hay texto para codificar");}
+	}
+
+	function Decodificar() {
+		if(input_texto.value != "") {
+			var textoDecodificado = input_texto.value;
+			textoDecodificado = textoDecodificado.replace(/ai/g,"a");
+			textoDecodificado = textoDecodificado.replace(/enter/g,"e");
+			textoDecodificado = textoDecodificado.replace(/imes/g,"i");
+			textoDecodificado = textoDecodificado.replace(/ober/g,"o");
+			textoDecodificado = textoDecodificado.replace(/ufat/g,"u");
+			output_texto.value = textoDecodificado;
+			input_texto.value = "";
+            msgImagen.style.visibility = 'hidden';
+            btnCopiar.style.visibility = 'visible';
+		} else {alert("No hay texto para decodificar");}
+	}
+
+	function Copiar_al_portapapeles() {
+		var texto_copiado = document.getElementById("texto_codificado");
+
+		texto_copiado.select();
+		document.execCommand("copy");
+		output_texto.value = "";
+        msgImagen.style.visibility = 'visible';
+        btnCopiar.style.visibility = 'hidden';
+	}
+
+	btnCodificar.onclick = Codificar;
+	btnDecodificar.onclick = Decodificar;
+	btnCopiar.onclick = Copiar_al_portapapeles;
+</script>
